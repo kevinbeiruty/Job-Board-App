@@ -1,20 +1,22 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
+const API_URL = import.meta.env.VITE_API_URL
+
 // Fetch all jobs
 export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async () => {
-  const response = await fetch('http://localhost:3000/jobs')
+  const response = await fetch(`${API_URL}/jobs`)
   return response.json()
 })
 
 // Fetch single job
 export const fetchJobById = createAsyncThunk('jobs/fetchJobById', async (id) => {
-  const response = await fetch(`http://localhost:3000/jobs/${id}`)
+  const response = await fetch(`${API_URL}/jobs/${id}`)
   return response.json()
 })
 
 // Add job
 export const addJob = createAsyncThunk('jobs/addJob', async (jobData) => {
-  const response = await fetch('http://localhost:3000/jobs', {
+  const response = await fetch(`${API_URL}/jobs`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(jobData)
@@ -24,7 +26,7 @@ export const addJob = createAsyncThunk('jobs/addJob', async (jobData) => {
 
 // Update job
 export const updateJob = createAsyncThunk('jobs/updateJob', async ({ id, jobData }) => {
-  const response = await fetch(`http://localhost:3000/jobs/${id}`, {
+  const response = await fetch(`${API_URL}/jobs/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(jobData)
@@ -34,7 +36,7 @@ export const updateJob = createAsyncThunk('jobs/updateJob', async ({ id, jobData
 
 // Delete job
 export const deleteJob = createAsyncThunk('jobs/deleteJob', async (id) => {
-  await fetch(`http://localhost:3000/jobs/${id}`, { method: 'DELETE' })
+  await fetch(`${API_URL}/jobs/${id}`, { method: 'DELETE' })
   return id
 })
 
