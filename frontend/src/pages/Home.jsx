@@ -152,24 +152,46 @@ const Home = () => {
   </div>
   <div className="categories-grid">
     {[
-      { label: 'Technology', icon: '💻' },
-      { label: 'Marketing', icon: '📊' },
-      { label: 'Finance', icon: '💰' },
-      { label: 'Design', icon: '🎨' },
-      { label: 'Healthcare', icon: '🏥' },
-      { label: 'Education', icon: '📚' },
+      {
+        label: 'Technology',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80',
+      },
+      {
+        label: 'Marketing',
+        image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&q=80',
+      },
+      {
+        label: 'Finance',
+        image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80',
+      },
+      {
+        label: 'Design',
+        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80',
+      },
+      {
+        label: 'Healthcare',
+        image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80',
+      },
+      {
+        label: 'Education',
+        image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80',
+      },
     ].map(cat => {
       const count = jobs.filter(j => j.category === cat.label).length
       return (
         <Link
-          to={`/jobs?search=${cat.label}`}
-          key={cat.label}
-          className="category-card"
-        >
-          <span className="category-icon">{cat.icon}</span>
-          <h3 className="category-label">{cat.label}</h3>
-          <p className="category-count">{count} {count === 1 ? 'job' : 'jobs'} available</p>
-        </Link>
+  to={`/jobs?search=${cat.label}`}
+  key={cat.label}
+  className="category-card"
+  style={{
+    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 100%), url(${cat.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+>
+  <h3 className="category-label">{cat.label}</h3>
+  <p className="category-count">{count} {count === 1 ? 'job' : 'jobs'} available</p>
+</Link>
       )
     })}
   </div>
