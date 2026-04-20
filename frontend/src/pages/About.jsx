@@ -85,25 +85,33 @@ const About = () => {
         <h2 className="about-section-title center">Meet The Team</h2>
         <div className="about-team-grid">
           <div className="about-team-card">
-            <div className="about-team-avatar">👨‍💼</div>
+            <div className="about-team-avatar">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="James Anderson" />
+              </div>
             <h3>James Anderson</h3>
             <p className="about-team-role">CEO & Founder</p>
             <p className="about-team-bio">10+ years of experience in HR and talent acquisition.</p>
           </div>
           <div className="about-team-card">
-            <div className="about-team-avatar">👩‍💻</div>
+            <div className="about-team-avatar">
+               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" alt="Sarah Mitchell" />
+            </div>
             <h3>Sarah Mitchell</h3>
             <p className="about-team-role">CTO</p>
             <p className="about-team-bio">Full stack engineer with a passion for building great products.</p>
           </div>
           <div className="about-team-card">
-            <div className="about-team-avatar">👨‍🎨</div>
+            <div className="about-team-avatar">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="David Chen" />
+            </div>
             <h3>David Chen</h3>
             <p className="about-team-role">Head of Design</p>
             <p className="about-team-bio">UI/UX expert focused on creating intuitive user experiences.</p>
           </div>
           <div className="about-team-card">
-            <div className="about-team-avatar">👩</div>
+            <div className="about-team-avatar">
+<img src="https://plus.unsplash.com/premium_photo-1688572454849-4348982edf7d??w=200&q=80" alt="Emily Roberts" />
+            </div>
             <h3>Emily Roberts</h3>
             <p className="about-team-role">Head of Marketing</p>
             <p className="about-team-bio">Growth specialist helping companies reach the right candidates.</p>

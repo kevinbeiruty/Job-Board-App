@@ -174,7 +174,7 @@ const Home = () => {
       },
       {
         label: 'Education',
-        image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80',
+        image: 'https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?w=400&q=80',
       },
     ].map(cat => {
       const count = jobs.filter(j => j.category === cat.label).length
